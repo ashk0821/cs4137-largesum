@@ -1,0 +1,2 @@
+Full sum: 2
+First 10 digits: 2
