@@ -5,8 +5,8 @@
 Group Number 8
 Group Members:
   Ayal Yakobe    (amy2127)
-  Leen Alshorafa (UNI: ?)
-  Aashir Khan    (UNI: ak5445)
+  Leen Alshorafa (laa2202)
+  Aashir Khan    (ak5445)
 
 -------------------------------------------------------------------------------
  OVERVIEW
