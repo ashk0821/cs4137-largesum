@@ -30,6 +30,9 @@ exist (so both lines show the same number). An empty file or a sum of 0 prints
   input1.txt  - input10.txt  Test case inputs.
   output1.txt - output10.txt Expected (and verified actual) program output for
                              the matching input file.
+  TestRunner.java            Development convenience: compiles/runs LargeSum
+                             against all test cases and checks the results.
+                             NOT a graded deliverable.
   README.txt                 This file.
 
 -------------------------------------------------------------------------------
@@ -44,6 +47,27 @@ the program always reads a file literally named "input.txt":
   java LargeSum
 
 Expected result for that run is in output5.txt.
+
+-------------------------------------------------------------------------------
+ RUNNING ALL TEST CASES AT ONCE (TestRunner)
+-------------------------------------------------------------------------------
+TestRunner.java automates the copy-run-compare loop above across every test
+case. It calls LargeSum in-process and captures its output, so LargeSum.java
+must be compiled together with it. It is pure Java (no external tools) and runs
+the same on macOS, Windows, and Linux.
+
+  javac TestRunner.java LargeSum.java   # compile both together
+  java TestRunner                       # run all cases 1..10
+  java TestRunner 5                      # run only case 5
+
+For each case it copies inputN.txt -> input.txt, runs LargeSum, and compares
+the output against outputN.txt, printing PASS or FAIL (and, on failure, the
+expected vs. actual output). Any pre-existing input.txt is backed up and
+restored automatically. It ends with a pass/fail tally and exits non-zero if
+any case fails.
+
+Note: TestRunner is a development helper only and is not part of the graded
+deliverable.
 
 -------------------------------------------------------------------------------
  ALGORITHM
